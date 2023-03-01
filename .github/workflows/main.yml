@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker image
-        run: docker build -t $DOCKER_USERNAME/tailwind_page:${{ github.sha }} .
+        run: docker build -t azizprog/tailwind_page:${{ github.sha }} .
       - name: Push Docker image
         run: |
           docker login -u $DOCKER_ACCESS_TOKEN
