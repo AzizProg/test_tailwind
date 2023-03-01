@@ -1,0 +1,9 @@
+.container{
+    @apply max-w-screen-xl mx-auto px-6 relative
+}
+.row{
+    @apply flex items-center pt-28 xl:pt-20 ;
+}
+.heading{
+    @apply text-lg mb-5 uppercase font-medium text-orange-500 underline decoration-orange-500 decoration-wavy decoration-2 underline-offset-8;
+}

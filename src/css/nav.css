@@ -1,0 +1,16 @@
+
+.nav-container{
+    @apply absolute top-0 right-0 flex items-center bg-orange-50 w-full h-full sm:w-1/2 lg:w-5/12 xl:w-4/12;
+}
+.nav-ul{
+    @apply w-full;
+}
+.nav-link{
+    @apply block p-3 w-full text-orange-800 text-base capitalize hover:bg-orange-600 hover:text-white hover:pl-6 transition-all duration-300;
+}
+.nav-close{
+    @apply absolute top-4 left-4 cursor-pointer text-orange-700;
+}
+.nav-open{
+    @apply fixed top-6 right-6 cursor-pointer w-[50px] h-[50px] bg-orange-500 rounded-full flex items-center justify-center text-white;
+}
