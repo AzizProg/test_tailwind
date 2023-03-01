@@ -17,7 +17,7 @@ RUN npx tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch
 FROM nginx:latest
 
 # Copier les fichiers de l'application compilée dans le répertoire public de Nginx
-COPY --from=build /app/public /usr/share/nginx/html
+#COPY --from=build /app/public /usr/share/nginx/html
 
 # Exposer le port 80 pour permettre l'accès à l'application
 EXPOSE 80
