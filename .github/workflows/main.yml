@@ -17,5 +17,5 @@ jobs:
         run: docker build -t azizprog/tailwind_page:${{ github.sha }} .
       - name: Push Docker image
         run: |
-          docker login -u $DOCKER_ACCESS_TOKEN
+          docker login -u azizprog -p Ab07121564!
           docker push azizprog/tailwind_page:${{ github.sha }}
