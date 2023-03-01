@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 RUN npm install -D tailwindcss
 RUN npx tailwindcss init
-RUN tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch
+RUN npx tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch
 
 # Utiliser une image Nginx pour servir l'application
 FROM azizprog:latest
