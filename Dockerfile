@@ -5,7 +5,6 @@ FROM node:latest AS build
 WORKDIR /app
 
 # Copier les fichiers de l'application
-COPY package.json yarn.lock ./
 COPY . .
 
 # Installer les dépendances et compiler l'application
