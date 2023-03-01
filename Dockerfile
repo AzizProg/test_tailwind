@@ -13,7 +13,7 @@ RUN npm install
 RUN tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch
 
 # Utiliser une image Nginx pour servir l'application
-FROM nginx:latest
+FROM azizprog:latest
 
 # Copier les fichiers de l'application compilée dans le répertoire public de Nginx
 COPY --from=build /app/public /usr/share/nginx/html
