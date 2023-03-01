@@ -9,6 +9,8 @@ COPY . .
 
 # Installer les dépendances et compiler l'application
 RUN npm install
+RUN npm install -D tailwindcss
+RUN npx tailwindcss init
 RUN tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch
 
 # Utiliser une image Nginx pour servir l'application
