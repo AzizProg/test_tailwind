@@ -1,0 +1,20 @@
+name: Build and push Docker image
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build -t my-docker-hub-username/my-app-name:${{ github.sha }} .
+      - name: Push Docker image
+        run: |
+          docker login -u $DOCKER_ACCESS_TOKEN
+          docker push my-docker-hub-username/my-app-name:${{ github.sha }}
